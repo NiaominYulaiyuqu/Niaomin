@@ -1,0 +1,610 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Niaomin World
+        </title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <script src="https://kit.fontawesome.com/6856323674.js" crossorigin="anonymous"></script>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+        <link rel="icon" type="image/png" href="niaomin-new-test.png" />
+
+    </head>
+    <body>
+        <style>
+            body{
+                background-color: rgb(255, 239, 135);
+                font-family: 微軟正黑體;
+                width: 100%;
+                position: relative;
+                left: -8px;
+                top: 110px;
+                animation-name: hi;
+                animation-duration: 1s;
+            }
+            @keyframes hi{
+                from{
+                    opacity: 0.5;
+                }
+                to{
+                    opacity: 1;
+                }
+            }
+            header{
+                width: 100%;
+                height: 80px;
+                background-color: black;
+                color: gold;
+                margin:0;
+                position: fixed;
+                top: 0;
+                left: 0;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+            }
+            #logo{
+                position: fixed;
+                top: 13px;
+                left: 47.5%;
+                -webkit-user-drag: none;
+                -webkit-user-select: none;
+                user-select: none;
+                -moz-user-select: none;
+            }
+            #social{
+                position: fixed;
+                top: 40px;
+                left: 64%;
+            }
+            .also{
+                font-size: 20px;
+                margin-right: 5px;
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                transition: 0.2s;
+            }
+            .also:hover{
+                font-size: 22px;
+            }
+            #pages{
+                background-color: gold;
+                color: rgb(56, 33, 0);
+                position: fixed;
+                top: 80px;
+                left: 0;
+                height: 30px;
+                width: 100%;
+                text-align: center;
+                padding-top: 10px;
+                box-shadow: 0px 0px 10px cornsilk;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+            }
+            .ye{
+                padding-left: 3%;
+                padding-right: 3%;
+                padding-bottom: 6px;
+                padding-top: 6px;
+                transition: 0.5s;
+                cursor: grab;
+                border-color: rgb(213, 167, 0);
+                text-decoration: none;
+                color: rgb(181, 106, 0);
+            }
+            #A{
+                position: relative;
+                top: -90px;
+            }
+            #B{
+                position: relative;
+                top: 25px;
+            }
+            #C{
+                position: relative;
+                top: 150px;
+            }
+            #zero{
+                position: relative;
+                width: 100%;
+                height: auto;
+                background-color: black;
+            }
+            #one{
+                width: 80%;
+                position: relative;
+                top: 100px;
+                background-color: white;
+                padding-left: 40px;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                margin-bottom: 30px;
+                border-radius: 20px;
+                text-align: left;
+            }
+            #two{
+                width: 80%;
+                position: relative;
+                top: 205px;
+                background-color: gold;
+                padding-left: 40px;
+                padding-top: 20px;
+                padding-bottom: 50px;
+                border-radius: 20px;
+                text-align: left;
+            }
+            #three{
+                width: 80%;
+                position: relative;
+                top: 335px;
+                background-color: white;
+                padding-left: 40px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                border-radius: 20px;
+                text-align: left;
+                
+            }
+            .title{
+                color: rgb(145, 109, 0);
+            }
+            hr{
+                border: gold;
+                border-style: solid;
+                border-width: 10px;
+                margin: 0;
+                padding: 0;
+            }
+            #we{
+                display: flex;           
+                width: auto;
+                height: auto;
+                justify-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .are{
+                background-color: rgb(255, 239, 135);
+                margin-right: 40px;
+                padding: 25px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px cornsilk,-1px -1px 10px cornsilk,1px -1px 10px cornsilk,-1px 1px 10px cornsilk;
+                width: 35%;
+                height: auto;
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            .pic{
+                width: 100%;
+                border-radius: 50px;
+                user-select: none;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+            }
+            .yuso{
+                font-size: 25px;
+                margin-right: 6px;
+                text-decoration: none;
+                color: rgb(199, 169, 0);
+                transition: 0.1s;
+            }
+            .yuso:hover{
+                font-size: 27px;
+                margin-right: 6px;
+                text-decoration: none;
+                color: rgb(139, 118, 0);
+            }
+            .our{
+                display: flex;           
+                width: auto;
+                height: auto;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .work{
+                background-color: white;
+                width: 80%;
+                padding: 40px;
+                display: flex;
+                border-radius: 25px;
+                justify-content: center;
+                align-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-left: -40px;
+            }
+            .workintro{
+                justify-content: center;
+                align-content: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                margin-left: 50px;
+
+            }
+            button{
+                background-color: gold;
+                border-color: rgb(255, 192, 44);
+                border-width: 5px;
+                border-style: solid;
+                border-radius: 30px;
+                color: chocolate;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+            button:hover{
+                background-color: rgb(255, 247, 0);
+                border-color: rgb(255, 230, 44);
+                color: red;
+            }
+            .smalltitle{
+                font-size: 20px;
+                color: goldenrod;
+                position: relative;
+                top: 20px;
+                font-size: 25px;
+            }
+            .year{
+                position: relative;
+                top: 10px;
+                color: rgb(255, 195, 92);
+            }
+            footer{
+                position: relative;
+                top: 400px;
+                width: 100%;
+                height: 100px;
+                background-color: gold;
+                padding-top: 25px;
+                color: chocolate;
+                opacity: 0.7;
+            }
+
+            /*幻燈片↓*/
+            .slideshow-container {
+                width: 65%;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Hide the images by default */
+            .mySlides {
+                display: none;
+            }
+
+            /* Next & previous buttons */
+            .prev, .next {
+                cursor: pointer;
+                position: absolute;
+                top: 40%;
+                width: auto;
+                margin-top: -22px;
+                padding: 30px;
+                color: white;
+                font-weight: bold;
+                font-size: 40px;
+                transition: 0.3s;
+                user-select: none;
+            }
+            .prev{
+                left: 0;
+            }
+            /* Position the "next button" to the right */
+            .next{
+                right: 0;
+            }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover{
+                left: -25px;
+                color: rgb(255, 236, 126);
+            }
+            .next:hover{
+                right: -25px;
+                color: rgb(255, 236, 126);
+            }
+            /* Number text (1/3 etc) */
+            .text {
+                color: gold;
+                font-size: 20px;
+                padding: 6.4px 10px;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.325);
+                animation-name: blin;
+                animation-duration: 0.5s;
+            }
+            /* The dots/bullets/indicators */
+            .dot {
+                cursor: pointer;
+                height: 15px;
+                width: 15px;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                background-color: rgb(191, 163, 91);
+                border-radius: 25%;
+                display: inline-block;
+                transition: background-color 0.5s ease;
+            }
+
+            .active, .dot:hover {
+                background-color: gold;
+                animation-name: lol;
+                animation-duration: 0.5s;
+            }
+
+            /* Fading animation */
+            .fade {
+                animation-name: fade;
+                animation-duration: 0.5s;
+                position: relative;
+            }
+
+            @keyframes fade {
+                from{
+                    opacity: 0.5;
+                    left: -10px;
+                }
+                to{
+                    opacity: 1;
+                    left: 0;
+                }
+            
+            }
+
+            @keyframes lol{
+                from{
+                    background-color: white;
+                    height: 20px;
+                    width: 20px;
+                }
+                to{
+                    background-color: gold;
+                    height: 15px;
+                    width: 15px;
+                }
+            }
+
+            @keyframes blin{
+                from{
+                    color: white;
+                }
+                to{
+                    color: gold;
+                }
+            }
+            /*幻燈片↑*/
+
+            .ye:hover{
+                background-color: rgb(255, 249, 188);
+                border: 5px;
+                border-style: dashed;
+                border-color: rgb(213, 167, 0);
+                color: black;
+            }
+
+            @media screen and (max-width: 850px){
+                .ye{
+                padding-left: 1.5%;
+                padding-right: 1.5%;
+                padding-bottom: 6px;
+                padding-top: 8px;
+                }
+                .ye:hover{
+                    background-color: rgb(255, 249, 188);
+                    border: 4px;
+                    border-style: dashed;
+                    border-color: rgb(213, 167, 0);
+                    color: black;
+                }
+                #logo{
+                    left: 45%;
+                }
+                #one{
+                    width: 80%;
+                }
+                #two{
+                    width: 80%;
+                }
+                #three{
+                    width: 80%;
+
+                }
+                .slideshow-container {
+                    width: 100%;
+                    position: relative;
+                    margin: auto;
+                }
+                .we{
+                    flex-wrap: wrap;
+                }
+                .are{
+                    width: 64%;
+                }
+                .workintro{
+                    margin-left: -5px;
+                    margin-right: -5px;
+
+                }
+            }
+        </style>
+        <div id="zero">
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with caption text -->
+    <div class="mySlides fade">
+        <div class="text">《黗弒》</div>
+            <img src="devour.png" style="width:100%;-webkit-user-drag: none;-webkit-user-select: none;user-select: none;">
+    </div>
+
+    <div class="mySlides fade">
+        <div class="text">《I'm Sure I'm Crazy At All》（REMAKE）</div>
+            <img src="CG.png" style="width:100%;-webkit-user-drag: none;-webkit-user-select: none;user-select: none;">
+        </div>
+
+    <div class="mySlides fade">
+        <div class="text">《再次綻放直到再次凋謝》</div>
+            <img src="BAUWA.png" style="width:100%;-webkit-user-drag: none;-webkit-user-select: none;user-select: none;">
+        </div>
+
+    <div class="mySlides fade">
+        <div class="text">《Treatment or Treatment》</div>
+            <img src="TOT.png" style="width:100%;-webkit-user-drag: none;-webkit-user-select: none;user-select: none;">
+        </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">←</a>
+    <a class="next" onclick="plusSlides(1)">→</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+
+    </div>
+        </div>
+
+        <hr>
+
+        <center>
+            <I style="font-size: 30px;color: chocolate;opacity: 0.64;position: relative;top: 50px;">
+                "探索創作的無限可能，找尋心靈深處的共鳴－ChatGPT"
+            </I>
+            <div id="A"></div>
+            <div id="one">
+                <h1 class="title" id="ABOUT">
+                    →關於我們//ABOUT US
+                </h1>
+                <p class="smalltitle">
+                    ＞團隊介紹：
+                </p>
+                <p style="font-size: 20px;">
+                    Niaomin(尿旻)是致力於製作動畫、音樂、遊戲的獨立團隊<br>
+                    創作原創奇幻世界的故事，靈感常來自歷史、時事、生活，也有歌曲、遊戲的衍生作品<br>
+                    支持Niaomin的各位就是我們前進的動力❤
+                </p>
+                <p class="smalltitle">
+                    ＞團隊成員：
+                </p>
+                <div id="we">
+                        <div class="are">
+                            <img src="Yu.png" class="pic">
+                            <h2 style="color: rgb(199, 169, 0);margin-right: 10px;">玉來玉去Yulaiyuqu</h2>
+                            <p style="font-size: 10px;margin-top: -20px;color: chocolate;opacity: 0.5;">
+                                天真無邪的印度媽媽咖哩佐日式奶油雞玉來玉去
+                            </p>
+                            <p style="opacity: 0.5;margin-top: -10px">團長，編劇、音樂、動畫、程式</p>
+                                <p>一隻戴著綠色帽子的豬:D 喜歡吃巧克力，特別愛電子、搖滾樂，是個乳共份子awa</p>
+                                <a class="fab fa-youtube yuso" href="https://www.youtube.com/@niaomin1234_yulaiyuqu" title="玉來玉去Youtube頻道" target="_blank"></a>
+                            <a class="fa-brands fa-x-twitter yuso" href="https://twitter.com/yulaiyuqu" title="玉來玉去Twitter（X）" target="_blank"></a>
+                            <a class="fa-brands fa-github yuso" href="https://github.com/NiaominYulaiyuqu" title="玉來玉去github" target="_blank"></a>
+                            <a class="fa-brands fa-pixiv yuso" href="https://www.pixiv.net/users/105831630" title="玉來玉去pixiv" target="_blank"></a>
+                        </div>
+                        <div class="are">
+                                <img src="Cat.png" class="pic">
+                            <h2 style="color: rgb(187, 104, 255);margin-right: 10px;">瘋貓（月嵐櫻）</h2>
+                            <p style="opacity: 0.5;margin-top: -10px">曲繪</p>
+                            <p>團長與此人很久無法聯繫，<br>圖片暫用貓貓</p>
+                        </div>
+                </div>
+                <p class="smalltitle" style="top: -20px;">
+                    ＞基本世界觀：
+                    <a href="https://youtu.be/9xZUBhA05qs" style="text-decoration: none;color: rgb(255, 86, 86)" target="_blank">伊闌慧林&阿莫福索星球
+                        <span class="fab fa-youtube"></span></a></p>
+            </div>
+            <hr style="position: relative;top: 140px;">
+            <div id="B"></div>
+            <div id="two">
+                <h1 class="title">→代表作//MASTERPIECE</h1>
+                    <div class="our">
+                        <div class="work">
+                            <img src="TDATG.png" style="width: 250px;-webkit-user-drag: none;user-select: none;-webkit-user-select: none;-moz-user-select: none;">
+                            <div class="workintro">
+                                <h2 style="color: rgb(181, 65, 181);">《龍與花園//The Dragon And The Garden》</h2>
+                                <p>起初是在Scratch上的動畫系列，2023搬到Youtube，技術上很爛<br>
+                                Golden Candle於此系列出場</p>
+                                <a href="https://www.youtube.com/playlist?list=PL0RN4Hqq24PAdkv2IXTS-PyhRydDCkeIE" style="text-decoration: none;" target="_blank">
+                                    <button>Youtube</button>
+                                </a>
+                                <a href="https://scratch.mit.edu/studios/29876280" style="text-decoration: none;" target="_blank">
+                                    <button>Scratch</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <hr style="position: relative;top: 275px;">
+            <div id="C"></div>
+            <div id="three">
+                <h1 class="title">→里程碑//MILESTONE</h1>
+                <p class="smalltitle">＞Youtube訂閱數//Subs</p>
+                <h2 class="year">西元2023年(民國112年)</h2>
+                <h3>× 10 月 19 日達到 64 訂閱！紀念影片：
+                    <a href="https://youtu.be/zBeN13RU3sg" style="text-decoration: none;color: rgb(255, 86, 86);" target="_blank">慶豐話Remix（短）</a></h3>
+            </div>
+            <footer>
+                Copyright © 2024 Niaomin<br>
+                Web Design by 玉來玉去Yulaiyuqu
+            </footer>
+        </center>
+
+        <nav id="pages">
+            <a href="#" class="ye">HOME</a>
+            <a href="#A" class="ye">ABOUT US</a>
+            <a href="#B" class="ye">MASTERPIECE</a>
+            <a href="#C" class="ye">MILESTONE</a>
+        </nav>
+            <header>
+                    <img src="niaomin-new-test.png" height="50px" id="logo">
+                        <div id="social">
+                            <a class="fab fa-youtube also" href="https://www.youtube.com/@niaomin1234" title="Niaomin官方Youtube頻道" target="_blank"></a>
+                            <a class="fa-brands fa-discord also" href="https://discord.gg/WBkdQwJe9p" title="粉絲群" target="_blank"></a>
+                            <a class="fa-brands fa-discord also" href="https://discord.com/invite/H6hH5CtSqS" style="color: yellow;" title="《大畏亡》動畫系列 徵配音、翻譯" target="_blank"></a>
+                        </div>
+            </header>
+            <script>
+                let slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = slides.length}
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                    }
+                    
+            </script>
+    </body>
+</html>
